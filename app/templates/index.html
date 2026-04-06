@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Your description">
+    <meta name="author" content="Your name">
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
+	<meta property="og:site_name" content="" /> <!-- website name -->
+	<meta property="og:site" content="" /> <!-- website link -->
+	<meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
+	<meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+	<meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+	<meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
+
+    <!-- Webpage Title -->
+    <title>Enhanced Code Analysis and Feedback System</title>
+
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/fontawesome-all.min.css" rel="stylesheet">
+    <link href="/static/css/aos.min.css" rel="stylesheet">
+    <link href="/static/css/swiper.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
+
+    
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-dark" aria-label="Main navigation">
+        <div class="container">
+
+            <!-- Image Logo -->
+            <!-- <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.svg" alt="alternative"></a> -->
+
+            <!-- Text Logo - Use this if you don't have a graphic logo -->
+            <a class="navbar-brand logo-text" href="{% url 'index' %}">Enhanced Code Analysis and Feedback System</a>
+
+            <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault" >
+                <ul class="navbar-nav ms-auto navbar-nav-scroll">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'about' %}">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'register' %}">Registration</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}">Login</a>
+                    </li>
+                    
+                </ul>
+                <span class="nav-item social-icons">
+                    
+                </span>
+            </div> <!-- end of navbar-collapse -->
+        </div> <!-- end of container -->
+    </nav> <!-- end of navbar -->
+    <!-- end of navigation -->
+
+
+    <!-- Home -->
+    <section class="home py-5 d-flex align-items-center" id="header">
+        <div class="container text-light py-5"  data-aos="fade-right"> 
+            <h1 class="headline">Enhanced <span class="home_text">Code Analysis</span><br>and Feedback System</h1>
+            <p class="para para-light py-3">Tools for code review help developers identify architectural and design patterns more effectively. However, there is a risk of focusing on less significant details, which can lead to inaccurate analysis</p>
+            <div class="d-flex align-items-center">
+                <p class="p-2"><i class="fas fa-laptop-house fa-lg"></i></p>
+                <p>Detects bugs early and ensures adherence to coding standards.</p>  
+            </div>
+            <div class="d-flex align-items-center">
+                <p class="p-2"><i class="fas fa-wifi fa-lg"></i></p>
+                <p>Optimizes code for better efficiency and scalability.</p>  
+            </div>
+            <div class="my-3">
+                <a class="btn" href="{% url 'register' %}">Let Get Started</a>
+            </div>
+        </div> <!-- end of container -->
+    </section> <!-- end of home -->
+
+
+    <!-- Information -->
+    <section class="information">
+        <div class="container-fluid">  
+            <div class="row text-light">
+                <div class="col-lg-4 text-center p-5" data-aos="zoom-in">
+                    <i class="fas fa-tachometer-alt fa-3x p-2"></i>
+                    <h4 class="py-3">Enhanced Collaboration</h4>
+                    <p class="para-light">Encourages communication and teamwork between developers</p>
+                </div>
+                <div class="col-lg-4 text-center p-5"  data-aos="zoom-in">
+                    <i class="fas fa-clock fa-3x p-2"></i>
+                    <h4 class="py-3">Reduced Technical Debt</h4>
+                    <p class="para-light">Identifies and addresses potential long-term issues early</p>
+                </div>
+                <div class="col-lg-4 text-center p-5 text-dark"  data-aos="zoom-in"> 
+                    <i class="fas fa-headset fa-3x p-2"></i>
+                    <h4 class="py-3">Better Maintainability </h4>
+                    <p class="para-light">Ensures the code is clean, understandable, and easier to update</p>
+                </div>
+            </div>
+        </div> <!-- end of container -->
+    </section> <!-- end of information -->
+    
+
+    
+    <!-- Services -->
+    <section class="services d-flex align-items-center py-5" id="services">
+        <div class="container text-light">
+            <div class="text-center pb-4" >
+                <p>OUR SERVICES</p> 
+                <h2 class="py-2">Explore unlimited possibilities</h2>
+                
+            <div class="row gy-4 py-2" data-aos="zoom-in">
+                
+                <div class="col-lg-4">
+                    <div class="card bg-transparent">
+                        <i class="fas fa-mobile fa-2x"></i>
+                        <h4 class="py-2">Knowledge Sharing</h4>
+                        <p class="para-light">Helps developers understand different parts of the codebase, facilitating smoother future development</p>
+                    </div>                    
+                </div>
+                <div class="col-lg-4">
+                    <div class="card bg-transparent">
+                        <i class="fas fa-home fa-2x"></i>
+                        <h4 class="py-2">Enhanced Security</h4>
+                        <p class="para-light">Code reviews help identify security vulnerabilities, reducing the risk of attacks</p>
+                    </div>                    
+                </div>
+                <div class="col-lg-4">
+                    <div class="card bg-transparent">
+                        <i class="fas fa-tv fa-2x"></i>
+                        <h4 class="py-2">Improved Developer Skills</h4>
+                        <p class="para-light">Continuous exposure to code review feedback helps developers grow and improve their skills</p>
+                    </div>                    
+                </div>
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </section> <!-- end of services -->
+
+
+
+    
+    <!-- Scripts -->
+    <script src="/static/js/bootstrap.min.js"></script><!-- Bootstrap framework -->
+    <script src="/static/js/purecounter.min.js"></script> <!-- Purecounter counter for statistics numbers -->
+    <script src="/static/js/swiper.min.js"></script><!-- Swiper for image and text sliders -->
+    <script src="/static/js/aos.js"></script><!-- AOS on Animation Scroll -->
+    <script src="/static/js/script.js"></script>  <!-- Custom scripts -->
+</body>
+</html>

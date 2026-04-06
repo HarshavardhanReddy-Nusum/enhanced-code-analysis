@@ -1,0 +1,102 @@
+<style>
+    /* Navbar */
+
+.navbar{
+width:100%;
+background:#333;
+padding:12px 0;
+}
+
+.container{
+width:90%;
+margin:auto;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.navbar-brand{
+color:white;
+font-size:20px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.navbar-nav{
+list-style:none;
+display:flex;
+gap:25px;
+margin:0;
+padding:0;
+}
+
+.nav-item{
+display:inline;
+}
+
+.nav-link{
+color:white;
+text-decoration:none;
+font-size:16px;
+padding:6px 12px;
+border-radius:4px;
+transition:0.3s;
+}
+
+.nav-link:hover{
+background:#007bff;
+}
+
+/* Logout button */
+
+.nav-link[href*="index"]{
+background:red;
+}
+
+.nav-link[href*="index"]:hover{
+background:darkred;
+}
+</style>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+<div class="container">
+
+<a class="navbar-brand" href="{% url 'submit_code' %}">
+Enhanced Code Analysis and Feedback System
+</a>
+
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarNav">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="{% url 'submit_code' %}">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="{% url 'generate_code' %}">Generate Code</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="{% url 'analyze_code' %}">Analyze Code</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="{% url 'profile' %}">Profile</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="{% url 'index' %}">Logout</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</nav>

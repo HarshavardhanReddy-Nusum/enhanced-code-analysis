@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>User Profile</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            background: #f4f4f4;
+        }
+
+        /* Navbar */
+
+        .navbar {
+            width: 100%;
+            background: #333;
+            padding: 15px;
+            color: rgb(31, 29, 29);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logout-btn {
+            background: red;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .logout-btn:hover {
+            background: darkred;
+        }
+
+        /* Layout */
+
+        .container {
+            display: flex;
+            margin: 30px;
+        }
+
+        /* Left Profile */
+
+        .profile-box {
+            width: 30%;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            margin-right: 20px;
+        }
+
+        .profile-box h2 {
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+
+        /* Right History */
+
+        .history-box {
+            width: 70%;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .history-card {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            background: #fafafa;
+        }
+
+        pre {
+            background: #eee;
+            padding: 10px;
+            overflow-x: auto;
+        }
+
+        /* Navbar */
+
+        #navbarNav {
+            width: 100%;
+            background: #333;
+            padding: 12px 0;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar-nav1 {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-item {
+            display: inline;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 8px 14px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover {
+            background: #007bff;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <!-- <div class="navbar">
+
+        <h3>Enhanced Code Analysis System</h3>
+
+        <form action="{% url 'logout' %}" method="post">
+            {% csrf_token %}
+            <button class="logout-btn">Logout</button>
+        </form>
+
+    </div> -->
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+
+        <a style="text-decoration: none; color: white; padding: 10px;" href="{% url 'submit_code' %}">
+            Enhanced Code Analysis and Feedback System
+        </a>
+
+        <ul class="navbar-nav1 ms-auto">
+
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'submit_code' %}">Home</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'generate_code' %}">Generate Code</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'analyze_code' %}">Analyze Code</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'profile' %}">Profile</a>
+            </li>
+
+
+        </ul>
+
+    </div>
+
+
+    <div class="container">
+
+        <!-- LEFT SIDE USER INFO -->
+
+        <div class="profile-box">
+
+            <h2>User Profile</h2>
+
+            <p><b>Name:</b> {{ user.name }}</p>
+
+            <p><b>Email:</b> {{ user.email }}</p>
+
+            <p><b>Address:</b> {{ user.address }}</p>
+
+            <form action="{% url 'logout' %}" method="post">
+                {% csrf_token %}
+                <button class="logout-btn">Logout</button>
+            </form>
+
+        </div>
+
+
+        <!-- RIGHT SIDE HISTORY -->
+
+        <div class="history-box">
+
+            <h2>Code History</h2>
+
+            {% for item in history %}
+
+            <div class="card my-3 p-3">
+
+                <!-- Basic Info -->
+                <h5>{{ item.title }}</h5>
+                <p><b>Language:</b> {{ item.language }}</p>
+
+                <!-- Toggle Button -->
+                <button onclick="toggleResult('{{ item.id }}')" class="btn btn-primary">
+                    ⬇ View Result
+                </button>
+
+                <!-- Hidden Result Section -->
+                <div id="result-{{ item.id }}" style="display:none; margin-top:10px;">
+                    <pre>{{ item.output_result }}</pre>
+
+                    <!-- Download Button -->
+                    <a href="{% url 'download_result' item.id %}" class="btn btn-success">
+                        Download Result
+                    </a>
+                </div>
+
+            </div>
+
+            {% empty %}
+
+            <p>No history available</p>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+    <script>
+        function toggleResult(id) {
+            var element = document.getElementById("result-" + id);
+
+            if (element.style.display === "none") {
+                element.style.display = "block";
+            } else {
+                element.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
