@@ -86,7 +86,7 @@ EMAIL_PORT = 587
 
 EMAIL_USE_TLS = True
 
-EMAIL_HOST_USER = 'n.h.v.reddy9866@gmail.com'
+EMAIL_HOST_USER = os.getenv("email_host_user")
 
 EMAIL_HOST_PASSWORD = 'outx kvpy byva qscc'
 
