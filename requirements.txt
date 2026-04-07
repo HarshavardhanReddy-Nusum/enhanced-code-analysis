@@ -36,6 +36,42 @@ pydantic>=2.12.5
 pydantic-core>=2.41.5
 
 
+Django
+django-allauth
+PyMySQL
+sqlparse
+grpcio
+grpcio-status
+protobuf
+google-api-core
+gunicorn
+
+# Utilities
+python-dotenv
+requests
+httpx
+anyio
+charset-normalizer
+idna
+certifi
+click
+cryptography
+tqdm
+regex
+pyparsing
+typing-extensions
+tzdata
+google-ai-generativelanguage
+google-generativeai
+google-genai
+google-api-python-client
+google-auth
+google-auth-httplib2
+googleapis-common-protos
+proto-plus
+pydantic
+pydantic-core
+
 
 # annotated-types==0.7.0
 # anyio==4.12.1
