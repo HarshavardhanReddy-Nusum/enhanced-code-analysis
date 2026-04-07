@@ -1,39 +1,39 @@
 # Core Django + DB + gRPC packages
-Django>=5.2,<6
-django-allauth>=65.15.0
-PyMySQL>=1.1.2
-sqlparse>=0.5.5
-grpcio
-grpcio-status
-protobuf>=6.31.1,<7.0.0
-google-api-core>=2.30.0,<3
-gunicorn>=25.3.0
+# Django>=5.2,<6
+# django-allauth>=65.15.0
+# PyMySQL>=1.1.2
+# sqlparse>=0.5.5
+# grpcio
+# grpcio-status
+# protobuf>=6.31.1,<7.0.0
+# google-api-core>=2.30.0,<3
+# gunicorn>=25.3.0
 
-# Utilities
-python-dotenv>=1.2.2
-requests>=2.32.5
-httpx>=0.28.0
-anyio>=4.12.1
-charset-normalizer>=3.4.5
-idna>=3.11
-certifi>=2026.2.25
-click>=8.3.1
-cryptography>=46.0.5
-tqdm>=4.67.3
-regex>=2026.2.28
-pyparsing>=3.3.2
-typing-extensions>=4.15.0
-tzdata>=2025.3
-google-ai-generativelanguage>=0.6.15
-google-generativeai>=0.8.6
-google-genai>=1.67.0
-google-api-python-client>=2.192.0
-google-auth>=2.49.1
-google-auth-httplib2>=0.3.0
-googleapis-common-protos>=1.73.0
-proto-plus>=1.27.1
-pydantic>=2.12.5
-pydantic-core>=2.41.5
+# # Utilities
+# python-dotenv>=1.2.2
+# requests>=2.32.5
+# httpx>=0.28.0
+# anyio>=4.12.1
+# charset-normalizer>=3.4.5
+# idna>=3.11
+# certifi>=2026.2.25
+# click>=8.3.1
+# cryptography>=46.0.5
+# tqdm>=4.67.3
+# regex>=2026.2.28
+# pyparsing>=3.3.2
+# typing-extensions>=4.15.0
+# tzdata>=2025.3
+# google-ai-generativelanguage>=0.6.15
+# google-generativeai>=0.8.6
+# google-genai>=1.67.0
+# google-api-python-client>=2.192.0
+# google-auth>=2.49.1
+# google-auth-httplib2>=0.3.0
+# googleapis-common-protos>=1.73.0
+# proto-plus>=1.27.1
+# pydantic>=2.12.5
+# pydantic-core>=2.41.5
 
 
 Django
