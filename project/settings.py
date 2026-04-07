@@ -13,6 +13,13 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 import os
 from pathlib import Path
 from dotenv import load_dotenv
+import socket
+socket.setdefaulttimeout(30)
+import dj_database_url
+
+DATABASES = {
+    'default': dj_database_url.parse(os.getenv("DATABASE_URL"))
+}
 
 load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -113,6 +120,9 @@ DATABASES = {
         'PASSWORD': os.getenv('db_password'),
         'HOST': os.getenv('db_host'),
         'PORT': os.getenv('port'),
+        'OPTIONS': {
+            'sslmode': 'require',
+        }
     }
 }
 

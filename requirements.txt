@@ -54,3 +54,4 @@ urllib3==2.6.3
 websockets==16.0
 whitenoise==6.9.0
 psycopg[binary]
+dj-database-url
