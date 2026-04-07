@@ -30,7 +30,7 @@ httpx==0.28.1
 idna==3.11
 joblib==1.5.3
 nltk==3.9.3
-packaging @ file:///C:/miniconda3/conda-bld/packaging_1761049101700/work
+# packaging @ file:///C:/miniconda3/conda-bld/packaging_1761049101700/work
 proto-plus==1.27.1
 protobuf==5.29.6
 pyasn1==0.6.2
